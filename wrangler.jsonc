@@ -1,0 +1,9 @@
+{
+  // Catálogo Rose Boutique Colombia en Cloudflare Workers
+  "name": "rose-colombia",
+  "main": "src/worker.js",
+  "compatibility_date": "2025-09-01",
+  "assets": { "directory": "./public", "binding": "ASSETS" },
+  "kv_namespaces": [{ "binding": "DB", "id": "70d3ea9ab5e541c3918c4d7f2f89324f" }],
+  "observability": { "enabled": true }
+}

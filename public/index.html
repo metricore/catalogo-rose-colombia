@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Catálogo Rose Boutique Colombia. Jeans colombianos y sandalias con precio detalle y por mayor. Pide por WhatsApp.">
+<meta property="og:title" content="Catálogo Rose Boutique · Colombia">
+<meta property="og:description" content="Jeans colombianos y sandalias con precio detalle y por mayor. Pide por WhatsApp.">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Catálogo Rose Boutique · Colombia</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="catalog.json" as="fetch" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Jost:wght@300;400;500&display=swap" media="print" onload="this.media='all'">
+<style>
+:root{
+  --bg:#ffffff; --fg:#111011; --muted:#6f6468; --rose:#f6dfe5; --rose-deep:#c98a9a; --frame:#faf1f3; --line:#ecdfe3; --band:#0d0c0d; --band-fg:#fbeef1;
+  --display:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --body:"Jost","Futura","Avenir Next","Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f0e0f;--fg:#f4ecee;--muted:#b3a5aa;--rose:#3a2a2f;--rose-deep:#e3a9b7;--frame:#1b1719;--line:#2c2427;--band:#000;--band-fg:#f6dfe5;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f0e0f;--fg:#f4ecee;--muted:#b3a5aa;--rose:#3a2a2f;--rose-deep:#e3a9b7;--frame:#1b1719;--line:#2c2427;--band:#000;--band-fg:#f6dfe5;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-weight:300;font-size:15px;line-height:1.55}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header.mast{background:var(--band);color:var(--band-fg)}
+header.mast .wrap{padding-block:56px 44px;text-align:center;display:grid;gap:14px}
+.eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;opacity:.75;margin:0}
+.mark{font-family:var(--display);font-weight:400;font-size:clamp(44px,9vw,92px);letter-spacing:.06em;line-height:1;margin:0;text-wrap:balance}
+.mark em{font-style:italic;color:var(--rose-deep)}
+.tag{font-family:var(--display);font-style:italic;font-size:clamp(17px,2.4vw,22px);margin:0;opacity:.9}
+.facts{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-top:8px;opacity:.8}
+nav.filters{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--band)}
+nav.filters .wrap{display:flex;gap:8px;overflow-x:auto;padding-block:12px;scrollbar-width:none}
+.chip{font:inherit;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:9px 16px;border:1px solid var(--line);background:transparent;color:var(--fg);border-radius:999px;cursor:pointer;white-space:nowrap}
+.chip:hover{border-color:var(--rose-deep)}
+.chip[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+button:focus-visible,a:focus-visible{outline:2px solid var(--rose-deep);outline-offset:2px}
+main .wrap{padding-block:36px 24px}
+.intro{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 24px;margin-bottom:26px}
+.intro h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,4vw,36px);margin:0}
+.intro p{margin:0;color:var(--muted);font-size:14px;max-width:52ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:40px 22px}
+@media (max-width:520px){.grid{grid-template-columns:1fr 1fr;gap:28px 12px}.go{letter-spacing:.06em;font-size:11px;padding:10px 8px}.price{grid-template-columns:1fr}.price div+div{border-top:1px solid var(--line)}.desc{font-size:12.5px}}
+.card{display:flex;flex-direction:column;gap:12px;min-width:0}
+.ph{aspect-ratio:4/5;max-width:100%;background:var(--frame);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.ph img{width:100%;height:100%;object-fit:contain;display:block}
+.meta{display:grid;gap:6px;align-content:start}
+.ref{margin:0;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--rose-deep);font-weight:500}
+.card h3{margin:0;font-family:var(--display);font-weight:400;font-size:18px;line-height:1.25;text-wrap:balance}
+.desc{margin:0;font-size:13px;color:var(--muted);line-height:1.5}
+.lbl{margin:4px 0 0;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.lbl b{font-weight:500;color:var(--fg);letter-spacing:.08em}
+.opts{display:flex;flex-wrap:wrap;gap:6px}
+.opt{font:inherit;font-size:13px;font-weight:400;padding:4px 10px;border:1px solid var(--line);background:transparent;color:var(--fg);cursor:pointer;font-variant-numeric:tabular-nums;min-height:32px}
+.opt:hover{border-color:var(--rose-deep)}
+.opt[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.price{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:4px}
+.price.one{grid-template-columns:1fr}
+.price div{background:var(--bg);padding:8px 10px;display:grid;gap:1px;min-width:0}
+.price div+div{background:var(--rose)}
+.price span{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.price b{font-weight:500;font-size:16px;font-variant-numeric:tabular-nums}
+.price small{font-size:11px;color:var(--muted)}
+.go{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:6px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--bg);background:var(--fg);text-decoration:none;padding:11px 14px;min-height:42px}
+.go:hover{background:var(--rose-deep);color:#fff}
+.empty{text-align:center;color:var(--muted);padding:60px 0}
+footer .wrap{padding-block:52px 64px;text-align:center;display:grid;gap:10px;justify-items:center;border-top:1px solid var(--line)}
+footer .mark{font-size:clamp(30px,5vw,44px)}
+footer p{margin:0;color:var(--muted);font-size:14px;max-width:52ch}
+footer a{color:var(--fg)}
+.how{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin-top:10px;font-size:13px}
+.how b{font-weight:500}
+@media (prefers-reduced-motion:no-preference){.ph img{transition:transform .5s ease,opacity .25s ease}.card:hover .ph img{transform:scale(1.025)}}
+</style>
+</head><body>
+<header class="mast"><div class="wrap">
+  <p class="eyebrow" id="eyebrow"></p>
+  <h1 class="mark" id="brand">Rose <em>Boutique</em></h1>
+  <p class="tag" id="tagline"></p>
+  <div class="facts"><span id="count"></span><span>Envíos en Colombia</span></div>
+</div></header>
+
+<nav class="filters" aria-label="Filtrar por estilo"><div class="wrap" id="chips"></div></nav>
+
+<main><div class="wrap">
+  <div class="intro"><h2>La colección</h2><p id="intro"></p></div>
+  <div class="grid" id="grid"><p class="empty">Cargando catálogo…</p></div>
+</div></main>
+
+<footer><div class="wrap">
+  <p class="mark" id="brand2">Rose <em>Boutique</em></p>
+  <div class="how"><span><b>1.</b> Elige tu modelo</span><span><b>2.</b> Escoge color y talla</span><span><b>3.</b> Pide por WhatsApp</span></div>
+  <p id="contact"></p>
+</div></footer>
+
+<script>
+(async()=>{
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt=n=>'$'+Number(n).toLocaleString('es-CO');
+let D;
+try{const fresh=/[?&]fresh/.test(location.search);const r=await fetch(fresh?'catalog.json?t='+Date.now():'catalog.json',fresh?{cache:'no-store'}:{});D=await r.json();}
+catch(e){$('grid').innerHTML='<p class="empty">No se pudo cargar el catálogo. Recarga la página.</p>';return;}
+const S=D.settings||{}, items=(D.products||[]).filter(p=>p.visible!==false&&(p.colors||[]).length);
+const brandHTML=(()=>{const w=(S.brand||'Rose Boutique').trim().split(/\s+/);return w.length>1?esc(w.slice(0,-1).join(' '))+' <em>'+esc(w.at(-1))+'</em>':esc(w[0]);})();
+$('brand').innerHTML=$('brand2').innerHTML=brandHTML;
+$('eyebrow').textContent=S.eyebrow||'';$('tagline').textContent=S.tagline||'';$('intro').textContent=S.intro||'';
+$('count').textContent=items.length+(items.length===1?' modelo':' modelos');
+const wa=(S.whatsapp||'').replace(/\D/g,''), ig=(S.instagram||'').replace(/^@/,'').trim();
+$('contact').innerHTML=[wa?`WhatsApp: <a href="https://wa.me/${wa}" target="_blank" rel="noopener">+${esc(wa)}</a>`:'',ig?`Instagram: <a href="https://instagram.com/${esc(ig)}" target="_blank" rel="noopener">@${esc(ig)}</a>`:''].filter(Boolean).join(' · ');
+const min=Number(S.mayor_min)||3;
+
+const order=S.categories||[]; const cats=[...order.filter(c=>items.some(i=>i.cat===c)),...[...new Set(items.map(i=>i.cat).filter(Boolean))].filter(c=>!order.includes(c))];
+items.sort((a,b)=>{const ia=cats.indexOf(a.cat),ib=cats.indexOf(b.cat);return (ia<0?99:ia)-(ib<0?99:ib);});
+
+$('chips').innerHTML=(cats.length>1?['<button class="chip" data-f="all" aria-pressed="true">Todos</button>',...cats.map(c=>`<button class="chip" data-f="${esc(c)}" aria-pressed="false">${esc(c)}</button>`)]:[]).join('');
+if(cats.length<2)document.querySelector('nav.filters').hidden=true;
+
+if(!items.length){$('grid').innerHTML='<p class="empty">Pronto subiremos nuevos modelos.</p>';return;}
+$('grid').innerHTML=items.map((p,k)=>{
+  const sizes=String(p.sizes||'').split(/[,;\s]+/).filter(Boolean);
+  const d=Number(p.detalle)||0, m=Number(p.mayor)||0;
+  const price=d||m?`<div class="price${d&&m?'':' one'}">${d?`<div><span>Detalle</span><b>${fmt(d)}</b></div>`:''}${m?`<div><span>Por mayor · desde ${min}</span><b>${fmt(m)}</b><small>c/u</small></div>`:''}</div>`:'';
+  return `<article class="card" data-cat="${esc(p.cat)}" data-id="${esc(p.id)}">
+<div class="ph"><img src="${esc(p.colors[0].img)}" alt="${esc(p.name+' '+p.colors[0].name)}" ${k<4?'fetchpriority="high"':'loading="lazy"'} decoding="async" width="800" height="1000"></div>
+<div class="meta">${p.ref?`<p class="ref">REF ${esc(p.ref)}</p>`:''}<h3>${esc(p.name)}</h3>${p.desc?`<p class="desc">${esc(p.desc)}</p>`:''}
+${price}
+<p class="lbl">Color: <b class="cn">${esc(p.colors[0].name)}</b></p><div class="opts colors">${p.colors.map((c,i)=>`<button class="opt" data-i="${i}" aria-pressed="${i===0}">${esc(c.name)}</button>`).join('')}</div>
+${sizes.length?`<p class="lbl">Talla</p><div class="opts sizes">${sizes.map(s=>`<button class="opt" data-s="${esc(s)}" aria-pressed="false">${esc(s)}</button>`).join('')}</div>`:''}
+${wa?`<a class="go" href="#" target="_blank" rel="noopener">Pedir por WhatsApp</a>`:''}
+</div></article>`;}).join('');
+
+const byId=Object.fromEntries(items.map(p=>[p.id,p]));
+document.querySelectorAll('.card').forEach(card=>{
+  const p=byId[card.dataset.id]; let ci=0, size='';
+  const img=card.querySelector('.ph img'), go=card.querySelector('.go');
+  const upd=()=>{ if(!go)return;
+    const msg=`Hola, quiero ${p.name}${p.ref?' REF '+p.ref:''}, color ${p.colors[ci].name}${size?', talla '+size:''}.`;
+    go.href=`https://wa.me/${wa}?text=${encodeURIComponent(msg)}`; };
+  card.querySelectorAll('.colors .opt').forEach(b=>b.onclick=()=>{ci=+b.dataset.i;
+    card.querySelectorAll('.colors .opt').forEach(x=>x.setAttribute('aria-pressed',x===b));
+    img.src=p.colors[ci].img; img.alt=p.name+' '+p.colors[ci].name; card.querySelector('.cn').textContent=p.colors[ci].name; upd();});
+  card.querySelectorAll('.sizes .opt').forEach(b=>b.onclick=()=>{size=b.getAttribute('aria-pressed')==='true'?'':b.dataset.s;
+    card.querySelectorAll('.sizes .opt').forEach(x=>x.setAttribute('aria-pressed',x===b&&size!==''));upd();});
+  upd();
+});
+document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{
+  document.querySelectorAll('.chip').forEach(x=>x.setAttribute('aria-pressed',x===c));
+  const f=c.dataset.f; document.querySelectorAll('.card').forEach(k=>k.hidden=!(f==='all'||k.dataset.cat===f));
+});
+})();
+</script>
+</body></html>

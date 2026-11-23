@@ -1,0 +1,300 @@
+{
+    "settings": {
+        "brand": "Rose Boutique",
+        "eyebrow": "Colombia · Nueva colección",
+        "tagline": "Jeans colombianos y sandalias para lucir tu figura",
+        "intro": "Elige tu modelo, el color y tu talla, y pídelo por WhatsApp. Comprando por mayor pagas el precio por mayor en cada prenda.",
+        "whatsapp": "",
+        "instagram": "",
+        "mayor_min": 3,
+        "categories": [
+            "Jeans Push Up",
+            "Jeans Bota Ancha",
+            "Jeans Bota Recta",
+            "Jeans Wide Leg",
+            "Sandalias Plataforma",
+            "Sandalias Planas"
+        ]
+    },
+    "products": [
+        {
+            "id": "j1",
+            "ref": "",
+            "visible": true,
+            "cat": "Jeans Push Up",
+            "name": "Jeans push up skinny con rotos",
+            "desc": "Tiro alto, bota tubo y rotos en las piernas. Bolsillos traseros que realzan.",
+            "detalle": 60000,
+            "mayor": 0,
+            "sizes": "8,10,12,14",
+            "colors": [
+                {
+                    "name": "Azul medio",
+                    "img": "uploads/jean-skinny-rotos-azul.webp"
+                }
+            ]
+        },
+        {
+            "id": "j2",
+            "ref": "",
+            "visible": true,
+            "cat": "Jeans Push Up",
+            "name": "Jeans push up skinny azul oscuro",
+            "desc": "Tiro alto, bota tubo, lavado oscuro con desgaste suave.",
+            "detalle": 60000,
+            "mayor": 0,
+            "sizes": "8,10,12,14",
+            "colors": [
+                {
+                    "name": "Azul oscuro",
+                    "img": "uploads/jean-skinny-oscuro.webp"
+                }
+            ]
+        },
+        {
+            "id": "j3",
+            "ref": "",
+            "visible": true,
+            "cat": "Jeans Push Up",
+            "name": "Jeans push up skinny azul claro",
+            "desc": "Tiro alto, bota tubo, lavado claro.",
+            "detalle": 60000,
+            "mayor": 0,
+            "sizes": "8,10,12,14",
+            "colors": [
+                {
+                    "name": "Azul claro",
+                    "img": "uploads/jean-skinny-claro.webp"
+                }
+            ]
+        },
+        {
+            "id": "j4",
+            "ref": "",
+            "visible": true,
+            "cat": "Jeans Push Up",
+            "name": "Jeans push up skinny lavado vintage",
+            "desc": "Tiro alto, bota tubo, lavado oscuro con efecto desgastado.",
+            "detalle": 60000,
+            "mayor": 0,
+            "sizes": "8,10,12,14",
+            "colors": [
+                {
+                    "name": "Azul oscuro",
+                    "img": "uploads/jean-skinny-vintage.webp"
+                }
+            ]
+        },
+        {
+            "id": "j5",
+            "ref": "",
+            "visible": true,
+            "cat": "Jeans Bota Ancha",
+            "name": "Jeans push up bota ancha azul claro",
+            "desc": "Tiro alto, bota ancha, bolsillos traseros con doble pespunte.",
+            "detalle": 75000,
+            "mayor": 0,
+            "sizes": "8,10,12,14,16",
+            "colors": [
+                {
+                    "name": "Azul claro",
+                    "img": "uploads/jean-bota-ancha-claro.webp"
+                }
+            ]
+        },
+        {
+            "id": "j6",
+            "ref": "",
+            "visible": true,
+            "cat": "Jeans Bota Ancha",
+            "name": "Jeans push up bota ancha azul medio",
+            "desc": "Tiro alto, bota ancha, bolsillos traseros con doble pespunte.",
+            "detalle": 75000,
+            "mayor": 0,
+            "sizes": "8,10,12,14,16",
+            "colors": [
+                {
+                    "name": "Azul medio",
+                    "img": "uploads/jean-bota-ancha-medio.webp"
+                }
+            ]
+        },
+        {
+            "id": "j7",
+            "ref": "",
+            "visible": true,
+            "cat": "Jeans Bota Ancha",
+            "name": "Jeans push up bota ancha azul oscuro",
+            "desc": "Tiro alto, bota ancha, lavado oscuro con detalles desgastados.",
+            "detalle": 75000,
+            "mayor": 0,
+            "sizes": "8,10,12,14,16",
+            "colors": [
+                {
+                    "name": "Azul oscuro",
+                    "img": "uploads/jean-bota-ancha-oscuro.webp"
+                }
+            ]
+        },
+        {
+            "id": "j8",
+            "ref": "",
+            "visible": true,
+            "cat": "Jeans Bota Ancha",
+            "name": "Jeans push up bota ancha negro",
+            "desc": "Tiro alto, bota ancha, lavado negro.",
+            "detalle": 75000,
+            "mayor": 0,
+            "sizes": "8,10,12,14,16",
+            "colors": [
+                {
+                    "name": "Negro",
+                    "img": "uploads/jean-bota-ancha-negro.webp"
+                }
+            ]
+        },
+        {
+            "id": "j9",
+            "ref": "",
+            "visible": true,
+            "cat": "Jeans Bota Recta",
+            "name": "Jeans push up bota recta blanco",
+            "desc": "Tiro alto, bota recta, color blanco.",
+            "detalle": 70000,
+            "mayor": 0,
+            "sizes": "8,10,12,14,16",
+            "colors": [
+                {
+                    "name": "Blanco",
+                    "img": "uploads/jean-bota-recta-blanco.webp"
+                }
+            ]
+        },
+        {
+            "id": "j10",
+            "ref": "",
+            "visible": true,
+            "cat": "Jeans Wide Leg",
+            "name": "Jeans wide leg lavado nevado",
+            "desc": "Tiro alto, bota ancha recta con bota deshilachada, lavado nevado.",
+            "detalle": 88000,
+            "mayor": 0,
+            "sizes": "10,12,14",
+            "colors": [
+                {
+                    "name": "Azul nevado",
+                    "img": "uploads/jean-wide-leg-nevado.webp"
+                }
+            ]
+        },
+        {
+            "id": "p1",
+            "ref": "",
+            "visible": true,
+            "cat": "Sandalias Plataforma",
+            "name": "Sandalia plataforma con anillo y strass",
+            "desc": "Plataforma acolchada, tira cruzada con anillo para el dedo y tira ancha, ambas con strass.",
+            "detalle": 55000,
+            "mayor": 0,
+            "sizes": "35,36,37,38,39,40",
+            "colors": [
+                {
+                    "name": "Negro",
+                    "img": "uploads/plat-anillo-negro.webp"
+                },
+                {
+                    "name": "Café",
+                    "img": "uploads/plat-anillo-cafe.webp"
+                }
+            ]
+        },
+        {
+            "id": "p2",
+            "ref": "GS 106",
+            "visible": true,
+            "cat": "Sandalias Plataforma",
+            "name": "Sandalia plataforma doble tira con strass",
+            "desc": "Plataforma blanca con dos tiras dobles de strass en tono plata y oro rosa.",
+            "detalle": 55000,
+            "mayor": 0,
+            "sizes": "38,39,40",
+            "colors": [
+                {
+                    "name": "Blanco",
+                    "img": "uploads/gs106-blanco.webp"
+                }
+            ]
+        },
+        {
+            "id": "p3",
+            "ref": "",
+            "visible": true,
+            "cat": "Sandalias Plataforma",
+            "name": "Sandalia plataforma tiras cruzadas con strass",
+            "desc": "Plataforma acolchada con tres tiras cruzadas de strass en plata, oro rosa y dorado.",
+            "detalle": 55000,
+            "mayor": 0,
+            "sizes": "35,36,37,38,39,40",
+            "colors": [
+                {
+                    "name": "Café",
+                    "img": "uploads/plat-cruzada-cafe.webp"
+                },
+                {
+                    "name": "Negro",
+                    "img": "uploads/plat-cruzada-negro.webp"
+                }
+            ]
+        },
+        {
+            "id": "p4",
+            "ref": "",
+            "visible": true,
+            "cat": "Sandalias Planas",
+            "name": "Sandalia plana fruncida",
+            "desc": "Sandalia plana de punta cuadrada con una tira ancha fruncida.",
+            "detalle": 30000,
+            "mayor": 0,
+            "sizes": "35,36,37,38,39,40",
+            "colors": [
+                {
+                    "name": "Camel",
+                    "img": "uploads/fruncida-camel.webp"
+                },
+                {
+                    "name": "Negro",
+                    "img": "uploads/fruncida-negro.webp"
+                },
+                {
+                    "name": "Blanco",
+                    "img": "uploads/fruncida-blanco.webp"
+                }
+            ]
+        },
+        {
+            "id": "p5",
+            "ref": "",
+            "visible": true,
+            "cat": "Sandalias Planas",
+            "name": "Sandalia plana fruncida con strass",
+            "desc": "Sandalia plana de punta cuadrada con tira fruncida al centro y dos tiras delgadas de strass.",
+            "detalle": 40000,
+            "mayor": 0,
+            "sizes": "35,36,37,38,39,40",
+            "colors": [
+                {
+                    "name": "Camel",
+                    "img": "uploads/fruncida-strass-camel.webp"
+                },
+                {
+                    "name": "Blanco",
+                    "img": "uploads/fruncida-strass-blanco.webp"
+                },
+                {
+                    "name": "Negro",
+                    "img": "uploads/fruncida-strass-negro.webp"
+                }
+            ]
+        }
+    ]
+}

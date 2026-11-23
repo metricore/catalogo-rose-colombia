@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex"><title>Panel · Rose Boutique Colombia</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@0;1&family=Jost:wght@300;400;500&display=swap">
+<style>
+[hidden]{display:none!important}
+:root{--bg:#fff;--fg:#111011;--muted:#6f6468;--rose:#f6dfe5;--rose-deep:#c98a9a;--line:#ecdfe3;--band:#0d0c0d;--frame:#faf1f3;--warn:#9a5b00}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font-family:"Jost",Arial,sans-serif;font-weight:300;font-size:15px}
+header{background:var(--band);color:#fbeef1;padding:18px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+header h1{font-family:"Bodoni Moda",Georgia,serif;font-weight:400;margin:0;font-size:24px}header h1 em{color:var(--rose-deep)}
+header a{color:#fbeef1;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+.hd{display:flex;gap:14px;align-items:center}
+.wrap{max-width:860px;margin:0 auto;padding:22px 16px 120px}
+.box{max-width:380px;margin:40px auto;display:grid;gap:12px}
+label,.lb{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:grid;gap:5px}
+input,textarea,select{font:inherit;font-weight:400;padding:10px 12px;border:1px solid var(--line);width:100%;background:#fff;color:var(--fg);font-variant-numeric:tabular-nums;text-transform:none;letter-spacing:normal}
+textarea{min-height:64px;resize:vertical}
+label input,label textarea,.color input{font-size:15px}
+input:focus,textarea:focus{outline:2px solid var(--rose-deep);outline-offset:0}
+button,.btn{font:inherit;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:11px 16px;border:0;background:var(--fg);color:#fff;cursor:pointer;display:inline-flex;align-items:center;gap:6px;min-height:42px}
+button.ghost,.btn.ghost{background:transparent;color:inherit;border:1px solid currentColor;padding:8px 12px;min-height:36px}
+button.danger{background:transparent;color:#9b1c1c;border:1px solid #e5b9b9;padding:8px 12px;min-height:36px}
+button:disabled{opacity:.5;cursor:wait}
+.msg{padding:12px 14px;background:var(--rose)}.err{padding:12px 14px;background:#fde8e8;color:#8a1c1c}
+h2{font-family:"Bodoni Moda",Georgia,serif;font-weight:400;font-size:26px;margin:28px 0 12px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr}}
+details.prod,details.set{border:1px solid var(--line);margin-bottom:12px;background:#fff}
+details.prod>summary,details.set>summary{list-style:none;cursor:pointer;padding:10px 12px;display:grid;grid-template-columns:52px 1fr auto;gap:12px;align-items:center}
+details.set>summary{grid-template-columns:1fr auto;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+summary::-webkit-details-marker{display:none}
+summary img,.thumb{width:52px;height:65px;object-fit:contain;background:var(--frame);display:block}
+.sm b{display:block;font-size:11px;letter-spacing:.2em;color:var(--rose-deep);font-weight:500;min-height:1em}
+.sm .nm{font-family:"Bodoni Moda",Georgia,serif;font-size:17px}
+.sm .pr{font-size:13px;color:var(--muted)}
+.flags{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.flag{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border:1px solid #f0d7b3;color:var(--warn);background:#fff8ec;white-space:nowrap}
+.flag.off{border-color:var(--line);color:var(--muted);background:var(--frame)}
+.body{padding:4px 12px 16px;display:grid;gap:14px;border-top:1px solid var(--line)}
+.colors{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.color{border:1px solid var(--line);padding:8px;display:grid;gap:8px}
+.color img{width:100%;aspect-ratio:4/5;object-fit:contain;background:var(--frame)}
+.color .acts{display:flex;gap:6px;flex-wrap:wrap}
+.color .acts button,.color .acts .btn{font-size:10.5px;padding:6px 8px;min-height:32px}
+.addc{border:1px dashed var(--rose-deep);display:flex;align-items:center;justify-content:center;min-height:200px;color:var(--rose-deep);cursor:pointer;text-align:center;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:10px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.chk{display:flex;align-items:center;gap:8px;text-transform:none;letter-spacing:0;font-size:14px;color:var(--fg)}.chk input{width:auto}
+.hint{font-size:12.5px;color:var(--muted);margin:0}
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--bg);border-top:1px solid var(--line);padding:12px 16px;display:flex;gap:12px;justify-content:center;align-items:center;flex-wrap:wrap;z-index:9}
+.bar .st{font-size:13px;color:var(--muted);min-width:180px}
+.bar .st.dirty{color:var(--warn)}
+input[type=file]{display:none}
+</style></head><body>
+<header><h1>Rose <em>Boutique</em> · Panel Colombia</h1>
+<div class="hd" id="hd" hidden><a href="/?fresh=1" target="_blank" rel="noopener">Ver catálogo</a><button class="ghost" id="logout">Salir</button></div>
+</header>
+<div class="wrap">
+<p class="msg" id="msg" hidden></p><p class="err" id="err" hidden></p>
+<form class="box" id="fsetup" hidden><p>Crea la contraseña del panel. Solo quien la tenga podrá cambiar el catálogo.</p>
+  <label>Contraseña nueva<input id="s1" type="password" minlength="8" required autocomplete="new-password"></label>
+  <label>Repite la contraseña<input id="s2" type="password" minlength="8" required autocomplete="new-password"></label>
+  <button type="submit">Crear contraseña</button></form>
+<form class="box" id="flogin" hidden><label>Contraseña<input id="lp" type="password" required autocomplete="current-password"></label>
+  <button type="submit">Entrar</button></form>
+<div id="main" hidden>
+  <div id="app"></div>
+  <details style="margin-top:36px"><summary>Cambiar contraseña</summary>
+    <form class="box" id="fpass" style="margin:16px 0"><label>Contraseña nueva<input id="np" type="password" minlength="8" required autocomplete="new-password"></label>
+      <button type="submit">Cambiar</button></form></details>
+  <div class="bar"><span class="st" id="st">Sin cambios</span><button id="save">Guardar cambios</button></div>
+</div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const show=(el,on=true)=>el.hidden=!on;
+const say=(m,isErr)=>{show($('msg'),!isErr&&!!m);show($('err'),!!isErr&&!!m);(isErr?$('err'):$('msg')).textContent=m||'';};
+const post=(u,b)=>fetch(u,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(b||{})}).then(r=>r.json()).catch(()=>({ok:false,error:'Sin conexión. Intenta de nuevo.'}));
+let D;
+let dirty=false, open=new Set();
+const app=document.getElementById('app'), st=document.getElementById('st'), saveBtn=document.getElementById('save');
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt=n=>'$'+Number(n||0).toLocaleString('es-CO');
+const touch=()=>{dirty=true;st.textContent='Tienes cambios sin guardar';st.className='st dirty';};
+window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue='';}});
+
+async function shrink(file){ // achica la foto en el celular antes de subirla (sin recortar)
+  try{
+    const bmp=await createImageBitmap(file); const k=Math.min(1,1000/Math.max(bmp.width,bmp.height));
+    const c=document.createElement('canvas'); c.width=Math.round(bmp.width*k); c.height=Math.round(bmp.height*k);
+    c.getContext('2d').drawImage(bmp,0,0,c.width,c.height);
+    let b=await new Promise(r=>c.toBlob(r,'image/webp',.8));
+    if(!b||b.type!=='image/webp') b=await new Promise(r=>c.toBlob(r,'image/jpeg',.86));
+    return b&&b.size<file.size?new File([b],'foto.'+(b.type==='image/webp'?'webp':'jpg'),{type:b.type}):file;
+  }catch(e){return file;}
+}
+async function upload(file){
+  const fd=new FormData(); fd.append('foto',await shrink(file));
+  st.textContent='Subiendo foto…';
+  const r=await fetch('/api/upload',{method:'POST',body:fd}).then(r=>r.json()).catch(()=>({ok:false,error:'Sin conexión. Intenta de nuevo.'}));
+  if(!r.ok){alert(r.error);st.textContent=dirty?'Tienes cambios sin guardar':'Sin cambios';return null;}
+  touch(); return r.img;
+}
+function pickFile(cb){const i=document.createElement('input');i.type='file';i.accept='image/*';i.onchange=()=>i.files[0]&&cb(i.files[0]);i.click();}
+
+function flags(p){const f=[];
+  if(p.visible===false)f.push('<span class="flag off">Oculto</span>');
+  if(!p.colors?.length)f.push('<span class="flag">Sin foto</span>');
+  if(!Number(p.detalle))f.push('<span class="flag">Sin precio</span>');
+  if(!String(p.sizes||'').trim())f.push('<span class="flag">Sin tallas</span>');
+  return f.join('');}
+
+function render(){
+  const S=D.settings, cats=(S.categories||[]);
+  app.innerHTML=`
+  <details class="set"><summary><span>Datos del catálogo (WhatsApp, textos, categorías)</span><span>▾</span></summary><div class="body">
+    <div class="g2">
+      <label>WhatsApp para pedidos (con 57)<input data-s="whatsapp" value="${esc(S.whatsapp)}" inputmode="tel" placeholder="573001234567"></label>
+      <label>Instagram (opcional)<input data-s="instagram" value="${esc(S.instagram)}" placeholder="roseboutique"></label>
+    </div>
+    <div class="g2">
+      <label>Nombre de la tienda<input data-s="brand" value="${esc(S.brand)}"></label>
+      <label>Por mayor desde (unidades)<input data-s="mayor_min" value="${esc(S.mayor_min||3)}" inputmode="numeric"></label>
+    </div>
+    <label>Texto pequeño arriba<input data-s="eyebrow" value="${esc(S.eyebrow)}"></label>
+    <label>Frase de portada<input data-s="tagline" value="${esc(S.tagline)}"></label>
+    <label>Texto de introducción<textarea data-s="intro">${esc(S.intro)}</textarea></label>
+    <label>Categorías en orden (separadas por coma)<input data-s="categories" value="${esc(cats.join(', '))}"></label>
+  </div></details>
+  <h2>Productos (${D.products.length})</h2>
+  <p class="hint">Toca un producto para editarlo. Los precios van en pesos colombianos, sin puntos (ej: 89900). Las tallas, separadas por coma (ej: 6, 8, 10, 12 o 35, 36, 37).</p>
+  <div id="list" style="margin-top:14px">${D.products.map((p,i)=>prodHTML(p,i,cats)).join('')}</div>
+  <div class="row" style="margin-top:10px"><button id="addp">+ Agregar producto</button></div>
+  <datalist id="catlist">${cats.map(c=>`<option value="${esc(c)}">`).join('')}</datalist>`;
+  bind();
+}
+function prodHTML(p,i,cats){
+  const c0=p.colors?.[0];
+  return `<details class="prod" data-i="${i}" ${open.has(p.id)?'open':''}><summary>
+    ${c0?`<img src="/${esc(c0.img)}" alt="">`:'<span class="thumb"></span>'}
+    <span class="sm"><b>${p.ref?'REF '+esc(p.ref):''}</b><span class="nm">${esc(p.name)}</span><br><span class="pr">${Number(p.detalle)?fmt(p.detalle):''}${Number(p.mayor)?' · Mayor '+fmt(p.mayor):''}${p.cat?' · '+esc(p.cat):''}</span></span>
+    <span class="flags">${flags(p)}</span></summary>
+  <div class="body">
+    <div class="g2"><label>Nombre<input data-f="name" value="${esc(p.name)}"></label><label>Referencia (REF)<input data-f="ref" value="${esc(p.ref)}" placeholder="Ej: GS 106"></label></div>
+    <label>Descripción<textarea data-f="desc">${esc(p.desc)}</textarea></label>
+    <div class="g3"><label>Precio detalle<input data-f="detalle" value="${Number(p.detalle)||''}" inputmode="numeric" placeholder="Ej: 89900"></label>
+      <label>Precio por mayor<input data-f="mayor" value="${Number(p.mayor)||''}" inputmode="numeric" placeholder="opcional"></label>
+      <label>Categoría<input data-f="cat" value="${esc(p.cat)}" list="catlist"></label></div>
+    <label>Tallas disponibles<input data-f="sizes" value="${esc(p.sizes)}" placeholder="Ej: 6, 8, 10, 12 o 35, 36, 37"></label>
+    <div class="lb">Colores y fotos</div>
+    <div class="colors">${(p.colors||[]).map((c,j)=>`<div class="color" data-j="${j}">
+      <img src="/${esc(c.img)}" alt=""><input data-c="name" value="${esc(c.name)}" placeholder="Color">
+      <div class="acts"><button class="ghost" data-a="photo">Cambiar foto</button>${j?'<button class="ghost" data-a="first" title="Usar como foto principal">Principal</button>':''}<button class="danger" data-a="delc">Quitar</button></div></div>`).join('')}
+      <div class="addc" data-a="addc">+ Agregar color<br>(subir foto)</div></div>
+    <div class="row" style="justify-content:space-between">
+      <label class="chk"><input type="checkbox" data-f="visible" ${p.visible!==false?'checked':''}> Mostrar en el catálogo</label>
+      <div class="row"><button class="ghost" data-a="up" ${i?'':'disabled'}>↑ Subir</button><button class="ghost" data-a="down" ${i<D.products.length-1?'':'disabled'}>↓ Bajar</button><button class="danger" data-a="delp">Eliminar producto</button></div>
+    </div>
+  </div></details>`;
+}
+function bind(){
+  app.querySelectorAll('[data-s]').forEach(el=>el.oninput=()=>{const k=el.dataset.s;
+    D.settings[k]=k==='categories'?el.value.split(',').map(s=>s.trim()).filter(Boolean):el.value; touch();});
+  app.querySelectorAll('details.prod').forEach(det=>{
+    const i=+det.dataset.i, p=D.products[i];
+    det.ontoggle=()=>det.open?open.add(p.id):open.delete(p.id);
+    det.querySelectorAll('[data-f]').forEach(el=>{const k=el.dataset.f;
+      el.oninput=el.onchange=()=>{p[k]=k==='visible'?el.checked:(k==='detalle'||k==='mayor')?Number(el.value.replace(/\D/g,''))||0:el.value;touch();
+        det.querySelector('.flags').innerHTML=flags(p);}; });
+    det.querySelectorAll('.color').forEach(cd=>{const j=+cd.dataset.j;
+      cd.querySelector('[data-c]').oninput=e=>{p.colors[j].name=e.target.value;touch();};
+      cd.querySelector('[data-a="photo"]').onclick=()=>pickFile(async f=>{const img=await upload(f);if(img){p.colors[j].img=img;render();}});
+      const fb=cd.querySelector('[data-a="first"]'); if(fb)fb.onclick=()=>{p.colors.unshift(...p.colors.splice(j,1));touch();render();};
+      cd.querySelector('[data-a="delc"]').onclick=()=>{if(confirm('¿Quitar el color "'+p.colors[j].name+'"?')){p.colors.splice(j,1);touch();render();}};
+    });
+    det.querySelector('[data-a="addc"]').onclick=()=>pickFile(async f=>{const img=await upload(f);if(img){p.colors=p.colors||[];p.colors.push({name:'',img});render();
+      const ins=app.querySelectorAll(`details.prod[data-i="${i}"] [data-c="name"]`);ins[ins.length-1]?.focus();}});
+    det.querySelector('[data-a="up"]').onclick=()=>{D.products.splice(i-1,0,...D.products.splice(i,1));touch();render();};
+    det.querySelector('[data-a="down"]').onclick=()=>{D.products.splice(i+1,0,...D.products.splice(i,1));touch();render();};
+    det.querySelector('[data-a="delp"]').onclick=()=>{if(confirm('¿Eliminar "'+p.name+'" del catálogo?')){D.products.splice(i,1);touch();render();}};
+  });
+  document.getElementById('addp').onclick=()=>{const id='p'+Date.now().toString(36);
+    D.products.push({id,ref:'',visible:true,cat:(D.settings.categories||[])[0]||'',name:'Nuevo producto',desc:'',detalle:0,mayor:0,sizes:'',colors:[]});
+    open.add(id);touch();render();const last=app.querySelector('details.prod:last-of-type');last?.scrollIntoView({behavior:'smooth'});last?.querySelector('[data-f="name"]')?.select();};
+}
+saveBtn.onclick=async()=>{
+  saveBtn.disabled=true;st.textContent='Guardando…';
+  const r=await fetch('/api/save',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(D)}).then(r=>r.json()).catch(()=>({ok:false,error:'Sin conexión. Intenta de nuevo.'}));
+  saveBtn.disabled=false;
+  if(r.ok){D=r.data;dirty=false;st.textContent='Guardado ✓ El catálogo ya está actualizado';st.className='st';render();}
+  else{st.textContent=r.error;st.className='st dirty';}
+};
+
+async function start(){
+  const r=await fetch('/api/catalog').then(r=>r.json()).catch(()=>({ok:false}));
+  if(!r.ok){say('No se pudo cargar el catálogo. Recarga la página.',true);return;}
+  D=r.data;D.settings=D.settings||{};D.products=D.products||[];
+  show($('fsetup'),false);show($('flogin'),false);show($('main'));show($('hd'));render();
+}
+$('fsetup').onsubmit=async e=>{e.preventDefault();if($('s1').value!==$('s2').value)return say('Las contraseñas no coinciden.',true);
+  const r=await post('/api/setup',{password:$('s1').value});r.ok?(say(''),start()):say(r.error,true);};
+$('flogin').onsubmit=async e=>{e.preventDefault();const b=e.target.querySelector('button');b.disabled=true;
+  const r=await post('/api/login',{password:$('lp').value});b.disabled=false;r.ok?(say(''),start()):say(r.error,true);};
+$('fpass').onsubmit=async e=>{e.preventDefault();const r=await post('/api/password',{password:$('np').value});
+  r.ok?(say('Contraseña cambiada.'),$('np').value=''):say(r.error,true);};
+$('logout').onclick=async()=>{if(dirty&&!confirm('Tienes cambios sin guardar. ¿Salir igual?'))return;dirty=false;await post('/api/logout');location.reload();};
+(async()=>{const me=await fetch('/api/me').then(r=>r.json()).catch(()=>null);
+  if(!me)return say('Sin conexión. Recarga la página.',true);
+  if(me.logged)return start();
+  show(me.setup?$('flogin'):$('fsetup'));(me.setup?$('lp'):$('s1')).focus();})();
+</script>
+</body></html>
