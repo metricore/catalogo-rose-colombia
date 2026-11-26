@@ -1,6 +1,6 @@
 # Catálogo Rose Boutique Colombia (Cloudflare)
 
-Catálogo de jeans y sandalias de Rose Boutique para Colombia, independiente de Tiendanube, en Cloudflare Workers (worker `catalogo-rose-colombia`, KV `rose-colombia-catalogo`). Orlando maneja productos, precios (COP), tallas y fotos desde `/admin`.
+Catálogo de jeans y sandalias de Rose Boutique para Colombia, independiente de Tiendanube, en Cloudflare Workers (worker `catalogo`, KV `rose-colombia-catalogo`). Orlando maneja productos, precios (COP), tallas y fotos desde `/admin`.
 
 - Habla con Orlando en español, breve y claro.
 - Sigue la skill `catalogo-rose-colombia` (.claude/skills/catalogo-rose-colombia/SKILL.md).
